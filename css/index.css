@@ -1,0 +1,371 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+body { 
+    background: #191919; 
+    font-family: 'Roboto', sans-serif;
+    color: #b4b4b4;
+    font-size: 15px; font-weight: 100;
+}
+.row {max-width: 1000px; padding: 0 10px; margin: 0 auto;}
+
+/* header 구역 */
+#header { position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;}
+#nav ul {
+    text-align: center; 
+    font-weight: bold;
+}
+#nav ul li {
+     display: inline-block; margin-bottom: 20px;
+}
+#nav ul li > a {
+    display: block; padding: 15px; width: 120px;
+    background: #070707;
+    border-radius: 50px; 
+}
+#nav ul li > a:hover {
+    background: #f55300; color: #fff; 
+}
+
+
+/* section 구역 */
+/* article1 구역 */
+#article1 .slide {
+    height: 100vh;
+    position: relative; 
+}
+#article1 .slide1 .bg {
+    background: rgba(0, 0, 0, 0.9); width: 100%; height: 500px;
+    position: absolute; top: 20%; border-radius: 50px;
+    animation: pulse 1s both;
+}
+#article1 .slide1 .bg > p {
+    position: absolute; bottom: 102%; left: 30px;
+    font-size: 18px; 
+}
+#article1 .slide1 .bg::before {
+    content: '';
+    position: absolute; top: -15px; left: 25px;
+    width: 160px; height: 5px; background: #0095f6;
+    animation: stick 0.5s both 0.5s;
+}
+#article1 .slide1 h1 {
+    width: 230px; 
+    position: absolute; top: 30%; margin-left: 7%;
+}
+#article1 .slide1 h1 .img1 {animation: pulse 1s both 1s; position: relative;}
+#article1 .slide1 h1 .img2 {position: absolute; top: 0; left: 0;}
+#article1 .slide1 h1 .img2 {opacity: 0;} 
+#article1 .slide1 .bg:hover .img1 {opacity: 0;} 
+#article1 .slide1 .bg:hover .img2 {opacity: 1;} 
+#article1 .slide1 h1::before {
+    content: '';
+    position: absolute; top: -5px; left: -5px;
+    width: 100%; height: 100%;
+    background: linear-gradient(-45deg, #ff0084 0%, #fcd200 100%); border-radius: 50%;
+    border: 5px solid #fff;
+    animation: circle 1.5s linear infinite;
+}
+#article1 .slide1 .txt {
+    position: absolute; top: 30%; right: 20%;
+}
+#article1 .slide1 .txt > h2 { 
+    font-size: 60px;
+    position: relative;
+    color: #fff; 
+}
+#article1 .slide1 .txt > h2 > a {
+    display: inline-block;
+    font-weight: 400; 
+    font-size: 28px; background: #0095f6;
+    border-radius: 10px; padding: 5px;
+    position: absolute; bottom: 20px; margin-left: 15px;
+    animation: pulse 1s both 2s;
+}
+#article1 .slide1 .txt > p:nth-of-type(1){
+    font-size: 26px;
+    padding: 15px 0;
+}
+#article1 .slide1 .txt > p:nth-of-type(1) b {
+    font-weight: 400;
+    padding: 0 30px 0 15px;
+}
+#article1 .slide1 .txt > p:nth-of-type(2) {
+    font-size: 30px;
+    font-weight: 500;
+    padding: 15px 0;
+    color: #fff; 
+}
+#article1 .slide1 .txt > p:nth-of-type(3) {
+    font-size: 28px;
+}
+@keyframes stick {
+    0% {width: 0px;}
+    100% {width: 160px;}
+}
+@keyframes circle {
+    0% {transform: rotate(0deg);}
+    50% {opacity: 1;}
+    100% {transform: rotate(360deg); }
+}
+#article1 .slide2 {display: none;}
+
+
+
+/* article2 구역 About me */
+
+#article2 > .outer {max-width: 1300px; padding: 100px 10px; margin: 0 auto; }
+#article2 .info {
+    float: left; width: 30%; 
+    background: #000;
+    border-radius: 30px;
+    padding: 30px;
+} 
+#article2 .info > .txt > p { font-size: 15px; line-height: 1.7; }
+#article2 .info > .txt > p:nth-child(1) { font-size: 28px; }
+#article2 .info > .txt > p:nth-child(2) { 
+    font-size: 24px; font-weight: 400; color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#article2 .info > .txt > p:nth-child(6),
+#article2 .info > .txt > p:nth-child(4) {padding-top: 20px;}
+#article2 .info > .txt > p > span { 
+    margin-right: 20px; font-weight: 500;
+    background: #b4b4b4; color: #111;
+}
+#article2 .info > .img {text-align: center; margin-top: 100px;}
+#article2 .info > .img > p {
+    padding: 20px; background: #b4b4b4;
+    border-radius: 20px; margin-bottom: 40px; color: #111;
+    font-weight: 500;
+    position: relative;
+}
+#article2 .info > .img > p::after {
+    content: '';
+    position: absolute; top: 100%; left: 50%; transform: translate(-50%);
+    border: 12px solid #b4b4b4;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    
+}
+#article2 .info > .img > img { width: 50%;}
+#article2 .right {float: right; width: 65%; line-height: 2; } 
+#article2 .right h3 {font-size: 28px; font-weight: 100; margin-bottom: 20px; position: relative;}
+#article2 .right h3::before {
+    content: '';
+    position: absolute; bottom: 10px; left: 0;
+    width: 15%; height: 5px; background: #f55300;
+}
+#article2 .right .license {
+    border: 1px solid #393939;
+    margin-bottom: 50px; padding: 30px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #191919 0%,#393939 100%);
+}
+#article2 .right .license span { 
+    margin-right: 20px; font-weight: 500;
+    background: #b4b4b4; color: rgba(0, 0, 0, 0.9);
+}
+#article2 .right .skill {
+    border: 1px solid #393939;
+    border-radius: 30px; padding: 30px;
+    background: linear-gradient(to right, #191919 0%,#393939 100%);
+}
+#article2 .right .skill > div {
+    width: 100%; 
+    position: relative;
+    margin: 15px 0px; padding: 3px;
+}
+#article2 .right .skill > div > p {
+    position: absolute; top: 0%; left: 0%;
+}
+#article2 .right .skill .score {
+    margin-left: 150px;
+}
+#article2 .right .skill .myscore {
+    text-align: right;
+    position: relative;
+}
+#article2 .right .skill .myscore > span {
+    font-weight: 900;
+    color: #191919;
+}
+#article2 .right .skill .html .myscore {
+    background: #f55300; width: 0%;
+    animation: htmlani 1s both 0s;
+}
+#article2 .right .skill .css .myscore {
+    background: #f55300; width: 0%;
+    animation: cssani 1s both 1s;
+}
+#article2 .right .skill .javascript .myscore {
+    background: #f55300; width: 0%;
+    animation: htmlani 1s both 2s;
+}
+#article2 .right .skill .jquery .myscore {
+    background: #f55300; width: 0%;
+    animation: cssani 1s both 3s;
+}
+#article2 .right .skill .react .myscore {
+    background: #f55300; width: 0%;
+    animation: cssani 1s both 4s;
+}
+@keyframes htmlani {
+    0% {width: 0%; opacity: 0;}
+    100% {width: 70%; opacity: 1;}
+}
+@keyframes cssani {
+    0% {width: 0%; opacity: 0;}
+    100% {width: 50%; opacity: 1;}
+}
+
+
+
+/* article3 시작 project */
+#article3 {padding: 100px 0;}
+#article3 .pjslide {position: relative;}
+#article3 .pjt {
+    background: #999; 
+    border-radius: 30px; width: 100%; 
+    margin: 0 auto;
+    color: #070707;
+}
+#article3 .pjt .img {
+    width: 100%;
+    padding-top: 60px;
+}
+#article3 .pjt .txt {
+    line-height: 1.7;
+    padding: 20px;
+}
+#article3 .pjt .txt h3 {
+    font-size: 28px;
+    font-weight: 500;
+}
+#article3 .pjslide .slick-arrow {
+    position: absolute; top: 40%;
+    background: none;
+    color: #b4b4b4;
+    font-size: 60px;
+    z-index: 9999;
+    border: none;
+}
+#article3 .pjslide .prev {
+    left: -10%;
+}
+#article3 .pjslide .next {
+    right: -10%;
+}
+#article3 .pjslide .slick-dots {
+    position: absolute; top: 78%; left: 50%; transform: translate(-50%);
+}
+#article3 .pjslide .slick-dots li {
+    display: inline-block; width: 100px;
+    margin: 0 5px ; background: #393939;
+    height: 5px;
+    position: relative;
+}
+#article3 .pjslide .slick-dots button {
+    width: 0%; height: 5px; color: transparent;
+    border: none; background: #f55300;
+    position: absolute; top: 0; left: 0;
+}
+#article3 .pjslide .slick-dots li.slick-active button {
+    animation: bar 3s both;
+}
+@keyframes bar {
+    0% {width: 0px;}
+    100% {width: 100px;}
+}
+
+/* article4시작 contact */
+#article4 {padding: 200px 0;}
+#article4 .but {
+    background: url(../img/resume.jpg) repeat center;
+    width: 100%; height: 490px;
+    background-attachment: fixed;
+    position: relative;
+}
+#article4 .but::before  {
+    content: '';
+    background: rgba(0, 0, 0, 0.8);
+    background: cover;
+    position: absolute; top: 0; left: 0; bottom: 0; right: 0;
+}
+#article4 .but .btn {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    float: left;
+}
+#article4 .but .btn > a {
+    display: inline-block;
+    padding: 15px; font-weight: 700;
+    font-size: 24px; color: #070707;
+    background: #b4b4b4;
+    border-radius: 30px; margin: 0px 10px;
+}
+#article4 .but .btn > a:hover {
+    background: #f55300;
+    color: #fff;
+}
+#article4 #detail {
+    position: fixed;
+    width: 100%; height: 100%; top: 0;  left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+#article4 #detail:target {display: block;}
+#article4 .form1 {
+    margin: 0 auto; border: 1px solid #393939;
+    font-family: 'Noto Sans KR', sans-serif;
+    border-radius: 30px; padding: 30px;
+    background: linear-gradient(to right, #191919 0%,#393939 100%);
+    font-size: 18px;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
+#article4 .form1::before {
+    content: '';
+    width: 3px; height: 416px; background: #999;
+    position: absolute; top: 30px; left: 130px;
+} 
+#article4 .form1 p {
+    border-bottom: 1px dashed #f55300;
+    padding: 10px 0;
+}
+#article4 label {
+    width: 150px; display: inline-block;
+    font-weight: 500;
+}
+#article4 input { 
+    padding: 5px;
+    background: transparent;
+}
+#article4 .form1 #memo {
+    width: calc(90% - 150px);
+    height: 150px;
+    vertical-align: top;
+    background: transparent;
+}
+#article4 .form1 p:nth-of-type(6) {
+    text-align: center;
+    border-bottom: none;
+}
+#article4 .form1 button {
+    padding: 5px 10px; margin: 10px 5px 0;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 30px;
+}
+
+/* footer 구역 */
+
+#footer .copy {
+    text-align: center;
+    margin-bottom: 80px;
+    line-height: 1.5;
+    font-size: 12px;
+}
