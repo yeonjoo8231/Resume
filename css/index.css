@@ -30,6 +30,9 @@ body {
     background: #f55300; color: #fff; 
 }
 
+#nav ul li.on > a {
+    background: #f55300; color: #fff; 
+}
 
 /* section 구역 */
 /* article1 구역 */
@@ -158,7 +161,12 @@ body {
 #article2 .right h3::before {
     content: '';
     position: absolute; bottom: 10px; left: 0;
-    width: 15%; height: 5px; background: #f55300;
+    width: 200px; height: 3px; background: #f55300;
+}
+#article2 .right .skill h3::before {
+    content: '';
+    position: absolute; bottom: 10px; left: 0;
+    width: 9%; height: 3px; background: #f55300;
 }
 #article2 .right .license {
     border: 1px solid #393939;
@@ -285,7 +293,7 @@ body {
 /* article4시작 contact */
 #article4 {padding: 200px 0;}
 #article4 .but {
-    background: url(../img/resume.jpg) repeat center;
+    background: url(../img/resume.jpg) repeat;
     width: 100%; height: 490px;
     background-attachment: fixed;
     position: relative;
@@ -297,7 +305,8 @@ body {
     position: absolute; top: 0; left: 0; bottom: 0; right: 0;
 }
 #article4 .but .btn {
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    position: absolute; top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
     float: left;
 }
 #article4 .but .btn > a {
